@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+span,p {
+    line-height: 25px;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -68,6 +72,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 2px 2px rgb(54, 54, 54);
 }
 
 header > div {
@@ -104,14 +109,19 @@ header > div > div:last-child > form > button {
 }
 
 /* Services */
+
 #services {
+    height: 100vh;
+    max-height: 850px;
+}
+#services > div:first-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;    
-    height: 340px;
+    width: 100%;
+    min-height: 380px;
 }
 
-#services > div:first-child {
+#services > div > div:first-child {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -119,19 +129,55 @@ header > div > div:last-child > form > button {
     justify-content: center;
 }
 
-#services > div:first-child > h1 {
+#services > div > div:first-child > h1 {
     text-align: center;
 }
 
-#services > div:first-child > ul > li {
+#services > div > div:first-child > ul > li {
     margin-bottom: 8px;
 }
-#services > div:first-child > ul > ul > li {
+#services > div > div:first-child > ul > ul > li {
     margin-bottom: 5px;
+}
+
+#services > div > div:last-child {
+    width: 100%;
+    background: url(img/services.jpg) no-repeat 100% 100%;
+    height: 100%;
 }
 
 #services > div:last-child {
     width: 100%;
-    background: url(img/services.jpg) no-repeat 100% 100%;
-    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#services >  div:last-child > h2 {
+    text-align: center;
+}
+
+/* About */
+
+#about {
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Contacts */
+
+#contacts {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
 }
