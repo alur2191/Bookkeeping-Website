@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Lato:wght@300;700&display=swap');* {
     box-sizing: border-box;
 }
 
 span,p {
-    line-height: 25px;
+    line-height: 35px;
 }
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
+    font-family: 'PT Serif', serif;
     margin: 10px 0px;
 }
 
@@ -22,10 +23,20 @@ ul {
     margin: 0px;
 }
 
+input, textarea {
+    border: 1px solid #dfdfdf;
+    padding: 8px 0px;
+}
+
+button {
+    border:  1px solid #dfdfdf;
+    padding: 5px 10px;
+}
+
 /* Utility */
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -43,16 +54,16 @@ ul {
 nav{
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 70px;
     align-items: center;
 }
 
 nav > ul {
     display: flex;
     flex-direction: row;
-    list-style: none;
     padding-left: 0px;
     margin: 0px;
+    list-style: none;
 }
 
 nav > ul > li {
@@ -96,7 +107,7 @@ header > div > div:last-child > form > * {
     margin-bottom: 10px;
 }
 
-header > div > div:last-child > form > div > input,textarea {
+header > div > div:last-child > form > div > input,#message {
     width: 300px;
 }
 
@@ -112,6 +123,7 @@ header > div > div:last-child > form > button {
 
 #services {
     height: 100vh;
+    min-height: 650px;
     max-height: 850px;
 }
 #services > div:first-child {
@@ -121,7 +133,7 @@ header > div > div:last-child > form > button {
     min-height: 380px;
 }
 
-#services > div > div:first-child {
+#services > div:first-child > div:first-child {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -129,50 +141,83 @@ header > div > div:last-child > form > button {
     justify-content: center;
 }
 
-#services > div > div:first-child > h1 {
+#services > div:first-child > div:first-child > h1 {
     text-align: center;
 }
 
-#services > div > div:first-child > ul > li {
+#services > div:first-child > div:first-child > ul  {
+    list-style:disc;
+}
+
+#services > div:first-child > div:first-child > ul > li {
     margin-bottom: 8px;
 }
-#services > div > div:first-child > ul > ul > li {
+#services > div:first-child > div:first-child > ul > ul > li {
     margin-bottom: 5px;
 }
 
-#services > div > div:last-child {
+#services > div:first-child > div:last-child {
     width: 100%;
     background: url(img/services.jpg) no-repeat 100% 100%;
     height: 100%;
 }
 
 #services > div:last-child {
-    width: 100%;
-    text-align: center;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
 }
 
-#services >  div:last-child > h2 {
-    text-align: center;
+#services > div:last-child > div > ul {
+    padding: 0;
+    list-style: none;
 }
+
+#services > div:last-child > div > ul > li {
+    padding-bottom: 7px;
+}
+
+
 
 /* About */
 
 #about {
     background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 /* Contacts */
 
+
 #contacts {
+    
     height: 60vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
 }
 
+#contacts > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+
+#contacts > div > form > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#contacts > div > form > div > input,textarea{
+    width: 100%;
+}
 /* Footer */
 
 footer {
