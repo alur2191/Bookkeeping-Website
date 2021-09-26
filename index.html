@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookkeeping website</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Icofont -->
+    <link rel="stylesheet" href="css/icons/icofont.min.css">
+
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="container">
-        <span class="logo"><span style="color: rgb(82, 136, 82)">Safe</span>Books</span>
-        <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Contacts</li>
-        </ul>
+    <nav>
+        <div class="container">
+            <span class="logo" ><span style="color: #145350;"><i class="icofont-safety"></i>Safe</span>Books</span>
+            <div>
+                <span style=" display: flex; align-items: center;"><i style="font-size: 1.1rem; margin-right: 5px;" class="icofont-phone"></i>+1 (424) 000 0000</span>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>About</li>
+                    <li>Contacts</li>
+                </ul>
+            </div>
+            
+        </div>
     </nav>
     <!-- Home -->
     <header>
@@ -117,37 +126,69 @@
     <section id="contacts" class="container">
         <div>
             <div>
-                <h2>Contact Us</h2>
-                <ul>
-                    <li>Email:</li>
-                    <li>Phone:</li>
-                    <li>Social Media</li>
-                </ul>
+                <form action="">
+                    <h2>Send A Message</h2>
+                    <div>
+                        <label for="contant-fullname">Full Name</label> 
+                        <input type="text" id="contant-fullname" name="contant-fullname">
+                    </div>
+                    <div>
+                        <label for="contant-email">E-mail</label> 
+                        <input type="email" id="contant-email" name="contant-email">
+                    </div>
+                    <div>
+                        <label for="contant-phone">Phone Number</label> 
+                        <input type="phone" id="contant-phone" name="contant-phone">
+                    </div>
+                    <div>
+                        <label for="contact-message">Message</label> 
+                        <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="submit" value="Send" >
+                </form>
             </div>
-            <form action="">
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error provident eum sit perspiciatis ratione amet, cum commodi alias ipsum asperiores sint nam possimus blanditiis quibusdam.</p>
                 <div>
-                    <label for="contant-fullname">Full Name</label> 
-                    <input type="text" id="contant-fullname" name="contant-fullname">
+                    <div>
+                        <i class="icofont-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <span>+1 (424) 000 000</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="icofont-ui-email"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <span>support@safebooks.com</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="icofont-location-pin"></i>
+                        <div>
+                            <h4>Office</h4>
+                            <span>Los Angeles, CA</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="icofont-clock-time"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <span>Mo-Fr | 9am-5pm(PDT)</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="contant-email">Email</label> 
-                    <input type="email" id="contant-email" name="contant-email">
-                </div>
-                <div>
-                    <label for="contant-phone">Phone Number</label> 
-                    <input type="phone" id="contant-phone" name="contant-phone">
-                </div>
-                <div>
-                    <label for="contact-message">Message</label> 
-                    <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
     <!-- Footer -->
-    <footer class="container">
-        <span class="logo"><span style="color: rgb(82, 136, 82)">Safe</span>Books</span>
-        <span>Created by Someone</span>
+    <footer>
+        <div class="container">
+            <span class="logo"><span style="color: #145350;;;">Safe</span>Books</span>
+            <span>Created by Someone</span>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Lato:wght@300;700&display=swap');* {
+    box-sizing: border-box;
+}
+
+span,p {
+    line-height: 35px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'PT Serif', serif;
+    margin:  0px;
+}
+
+ul {
+    margin: 0px;
+}
+
+input, textarea {
+    border: 1px solid #c0d3d2;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+button {
+    border:  1px solid #dfdfdf;
+    padding: 5px 10px;
+}
+
+/* Utility */
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.font-secondary {
+    color: white;
+}
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    top:0px;   
+    background-color: white;
+}
+
+nav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+nav > div > div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav > div > div > span {
+    font-size: 0.9rem;
+}
+
+
+nav > div > div > ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+nav > div > div > ul > li {
+    margin-right: 10px;
+}
+
+nav > div > div > ul > li:last-child {
+    margin-right: 0px;
+}
+
+/* Home */
+
+header {
+    background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px rgb(54, 54, 54);
+}
+
+header > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 150px;
+    
+}
+
+header > div > div:last-child {
+    margin-top: 30px;
+}
+
+header > div > div:last-child > form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header > div > div:last-child > form > * {
+    margin-bottom: 10px;
+}
+
+header > div > div:last-child > form > div > input,#message {
+    width: 300px;
+}
+
+header > div > div:last-child > form > :last-child {
+    margin-bottom: 0px;
+}
+
+header > div > div:last-child > form > button {
+    width: 70px
+}
+
+/* Services */
+
+#services {
+    height: 100vh;
+    min-height: 650px;
+    max-height: 850px;
+}
+#services > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 380px;
+}
+
+#services > div:first-child > div:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    justify-self: flex-end;
+    justify-content: center;
+}
+
+#services > div:first-child > div:first-child > h1 {
+    text-align: center;
+}
+
+#services > div:first-child > div:first-child > ul  {
+    list-style:disc;
+}
+
+#services > div:first-child > div:first-child > ul > li {
+    margin-bottom: 8px;
+}
+#services > div:first-child > div:first-child > ul > ul > li {
+    margin-bottom: 5px;
+}
+
+#services > div:first-child > div:last-child {
+    width: 100%;
+    background: url(../img/services.jpg) no-repeat 100% 100%;
+    height: 100%;
+}
+
+#services > div:last-child {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#services > div:last-child > div > ul {
+    padding: 0;
+    list-style: none;
+}
+
+#services > div:last-child > div > ul > li {
+    padding-bottom: 7px;
+}
+
+
+
+/* About */
+
+#about {
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/about.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contacts */
+
+
+#contacts {
+    height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+#contacts > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+}
+
+#contacts > div > div {
+    position: relative;
+}
+
+#contacts > div > div > form {
+    position: absolute;
+    top: -120px;
+    background-color: white;
+    width: 100%;
+    padding: 35px 25px;
+    box-shadow: 0px 0px 6px 4px rgba(31, 31, 31, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+#contacts > div > div > form > h2{
+    margin-bottom: 25px;
+    align-self: start;
+}
+
+#contacts > div > div > form > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+#contacts > div > div > form > div > label{
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: white;
+}
+
+#contacts > div > div > form > div:last-child{
+    margin-bottom: 0px;
+}
+
+#contacts > div > div > form > div > input,textarea{
+    width: 100%;
+}
+
+.contact-details {
+    position: absolute;
+    top: -20px;
+}
+
+
+.contact-details > p{
+    text-align:justify;
+}
+
+.contact-details > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    margin-top: 60px;
+}
+.contact-details > div > div {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.contact-details > div > div > i{
+    font-size: 2.8rem;
+    color: #145350;
+}
+
+.contact-details > div > div > div > h4 {
+    margin: 0;
+    color: #145350;
+}
+/* Footer */
+
+footer {
+    border-top: 1px solid #c0d3d2;
+    
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
