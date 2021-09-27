@@ -29,6 +29,10 @@ input, textarea {
     border-radius: 8px;
 }
 
+textarea {
+    resize: none;
+}
+
 button {
     border:  1px solid #dfdfdf;
     padding: 5px 10px;
@@ -37,13 +41,17 @@ button {
 /* Utility */
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .logo {
     font-weight: 700;
+}
+
+.brand-color {
+    color: #145350;
 }
 
 .font-secondary {
@@ -56,6 +64,8 @@ nav {
     position: sticky;
     top:0px;   
     background-color: white;
+    border-bottom: 1px solid #c0d3d2;
+
 }
 
 nav > div {
@@ -85,7 +95,7 @@ nav > div > div > ul {
 }
 
 nav > div > div > ul > li {
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 nav > div > div > ul > li:last-child {
@@ -140,9 +150,7 @@ header > div > div:last-child > form > button {
 /* Services */
 
 #services {
-    height: 100vh;
     min-height: 650px;
-    max-height: 850px;
 }
 #services > div:first-child {
     display: grid;
@@ -161,6 +169,7 @@ header > div > div:last-child > form > button {
 
 #services > div:first-child > div:first-child > h1 {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #services > div:first-child > div:first-child > ul  {
@@ -181,24 +190,20 @@ header > div > div:last-child > form > button {
 }
 
 #services > div:last-child {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    justify-content: space-between;
+    gap: 30px;
     align-items: center;
     text-align: center;
-    margin-top: 70px;
-}
-
-#services > div:last-child > div > ul {
-    padding: 0;
-    list-style: none;
-}
-
-#services > div:last-child > div > ul > li {
-    padding-bottom: 7px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
+#services > div:last-child > div > p {
+    line-height: 1.5rem;
+}
 
 /* About */
 
@@ -215,7 +220,7 @@ header > div > div:last-child > form > button {
 
 
 #contacts {
-    height: 550px;
+    height: 500px;
     display: flex;
     align-items: center;
 }
@@ -233,10 +238,10 @@ header > div > div:last-child > form > button {
 
 #contacts > div > div > form {
     position: absolute;
-    top: -120px;
+    top: -150px;
     background-color: white;
     width: 100%;
-    padding: 35px 25px;
+    padding: 50px 40px;
     box-shadow: 0px 0px 6px 4px rgba(31, 31, 31, 0.2);
     display: flex;
     flex-direction: column;
@@ -246,14 +251,14 @@ header > div > div:last-child > form > button {
 
 
 #contacts > div > div > form > h2{
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     align-self: start;
 }
 
 #contacts > div > div > form > div{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     position: relative;
     width: 100%;
 }
@@ -273,9 +278,13 @@ header > div > div:last-child > form > button {
     width: 100%;
 }
 
+#contacts > div > div > form > div > textarea{
+    height: 100px;
+}
+
 .contact-details {
     position: absolute;
-    top: -20px;
+    top: -10px;
 }
 
 
@@ -287,7 +296,7 @@ header > div > div:last-child > form > button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .contact-details > div > div {
     display: flex;
@@ -314,6 +323,6 @@ footer {
 footer > div {
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 70px;
     align-items: center;
 }
