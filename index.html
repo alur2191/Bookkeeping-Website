@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookkeeping website</title>
     <link rel="stylesheet" href="css/main.css">
-    <!-- Icofont -->
-    <link rel="stylesheet" href="css/icons/icofont.min.css">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Icons: Icofont -->
+    <link rel="stylesheet" href="css/icons/icofont.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav>
         <div class="container">
-            <span class="logo" ><span style="color: #145350;"><i class="icofont-safety"></i>Safe</span>Books</span>
+            <a class="logo" href="/"><span style="color: #145350;"><i class="icofont-safety"></i>Safe</span>Books</a>
             <div>
                 <span style=" display: flex; align-items: center;"><i style="color: #145350; font-size: 1.4rem; margin-right: 2px;" class="icofont-phone"></i>+1 (424) 000 0000</span>
                 <ul>
@@ -24,7 +33,6 @@
                     <li>Contacts</li>
                 </ul>
             </div>
-            
         </div>
     </nav>
     <!-- Home -->
@@ -43,17 +51,21 @@
                 <form action="">
                     <div>
                         <label for="fullname"></label>
-                        <input type="text" name="fullname" id="fullname">
+                        <input type="text" name="fullname" id="fullname" placeholder="Full Name">
                     </div>
                     <div>
                         <label for="email"></label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div>
+                        <label for="phone"></label>
+                        <input type="phone" name="phone" id="phone" placeholder="Phone Number">
                     </div>
                     <div>
                         <label for="message"></label>
-                        <textarea name="message" id="message" ></textarea>
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
                     </div>
-                    <button type="submit">Send</button>
+                    <input type="submit" value="Send">
                 </form>
             </div>
         </div>
@@ -80,7 +92,7 @@
         </div>
         <div class="container" >
             <div>
-                <i style="font-size:3.5rem;" class="brand-color icofont-file-document"></i>
+                <i style="font-size:3.5rem;" class="brand-color icofont-chart-line"></i>
                 <h3 style="margin-top: 5px" class="brand-color">Financial Reporting</h3>
                 <em>(Balance Sheet, Profit/Loss, Cash Flow Statements)</em>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo magni ut dolor saepe voluptate corrupti repellendus molestias similique quibusdam!</p>
@@ -98,7 +110,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo magni ut dolor saepe voluptate corrupti repellendus molestias similique quibusdam!</p>
             </div>
             <div>
-                <i style="font-size:3.5rem;" class="brand-color icofont-pay"></i>
+                <i style="font-size:3.5rem;" class="brand-color icofont-paper"></i>
                 <h3 style="margin-top: 5px" class="brand-color">Billing</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nemo magni ut dolor saepe voluptate corrupti repellendus molestias similique quibusdam!</p>
             </div>
@@ -175,7 +187,7 @@
                         <i class="icofont-clock-time"></i>
                         <div>
                             <h4>Hours</h4>
-                            <span>Mo-Fr | 9am-5pm(PDT)</span>
+                            <span>Mo-Fr | 9am-5pm (PDT)</span>
                         </div>
                     </div>
                 </div>
