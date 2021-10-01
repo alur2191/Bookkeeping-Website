@@ -139,6 +139,10 @@ nav > div > div > ul > li:last-child {
     margin-right: 0px;
 }
 
+.active {
+    font-weight: 700;
+}
+
 /* Home */
 
 header {
@@ -151,40 +155,40 @@ header {
     text-shadow: 2px 2px rgb(54, 54, 54);
 }
 
-header > div {
+header > section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 150px;
     
 }
 
-header > div > div:last-child {
+header > section > div:last-child {
     margin-top: 30px;
 }
 
-header > div > div:last-child > form {
+header > section > div:last-child > form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-header > div > div:last-child > form > * {
+header > section > div:last-child > form > * {
     margin-bottom: 10px;
 }
 
-header > div > div:last-child > form > div > input,#message {
+header > section > div:last-child > form > div > input,#message {
     width: 300px;
 }
 
-header > div > div:last-child > form > div > textarea {
+header > section > div:last-child > form > div > textarea {
     height: 140px;
 }
 
-header > div > div:last-child > form > :last-child {
+header > section > div:last-child > form > :last-child {
     margin-bottom: 0px;
 }
 
-header > div > div:last-child > form > button {
+header > section > div:last-child > form > button {
     width: 70px
 }
 
