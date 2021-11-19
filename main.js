@@ -1,79 +1,23 @@
-// SMOOTH SCROLL
-
-// Select all anchor links.
-const links = document.querySelectorAll("nav a");
-
-// Attach an click event listener to each link
-for (const link of links) {
-    link.addEventListener("click", clickHandler);
-}
-
-
-// Click handling function
-function clickHandler(e) {
-    e.preventDefault();
-    
-    // Remove all .active classes from elements
-    var previous = document.getElementsByClassName("active");
-    while (previous.length)
-        previous[0].classList.remove("active");
-    // Add active to clicked anchor element
-    e.target.classList.add('active')
-    changeActive(e.target)
-    // Attribute of each anchor point to section ids
-    const href = this.getAttribute("href");
-    if(href === '#'){
-        // If href returns # scroll to the top of the page
-        scroll({
-            top: 0,
-            behavior: "smooth"
-        });
-    } else {
-        
-        // Else, place top offset position of the element into a variable
-        const offsetTop = document.querySelector(href).offsetTop-70;
-        scroll({
-            top: offsetTop,
-            behavior: "smooth"
-        });
-    }
-}
-
+// Active nav item style changer
+const links = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
-function changeActive(current){
-    var previous = document.getElementsByClassName("active");
-    while (previous.length)
-        previous[0].classList.remove("active");
+function changeLinkState() {
+    let index = sections.length;
 
-    // Add active to clicked anchor element
-    current.classList.add('active')
+    while(--index && window.scrollY + 200 < sections[index].offsetTop) {}
+    
+    links.forEach((link) => link.classList.remove('active'));
+    links[index].classList.add('active');
 }
 
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);
 
-function checkActive(currentSection) {
-    
-        links.forEach((link)=>{
-            if("#"+currentSection === link.getAttribute('href')){
-                changeActive(link)
-            }
-            
-        })
+// Mobile nav enabler
+var enabled = false;
+function mobileMenu(){
+    var nav = document.getElementById('nav-mobile')
+    enabled ? nav.style.display = 'none' : nav.style.display = 'flex'
+    enabled = !enabled
 }
-
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.7,
-};
-
-observer = new IntersectionObserver((entries)=> {
-    
-    entries.forEach((entry,i) => {
-        checkActive(entry.target.id)
-    })
-}, observerOptions)
-
-sections.forEach(section=>{
-    observer.observe(section)
-})

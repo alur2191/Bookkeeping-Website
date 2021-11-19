@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #145350;
+    --primary-border: 1px solid #c0d3d2;
+}
+
 span,p {
     line-height: 35px;
 }
@@ -15,7 +20,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Lato', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -33,10 +38,13 @@ h2 {
 
 ul {
     margin: 0px;
+    padding-left: 0px;
+    margin: 0px;
+    list-style: none;
 }
 
 input, textarea{
-    border: 1px solid #c0d3d2;
+    border: var(--primary-border);
     padding: 8px 10px;
     border-radius: 8px;
     font-family: 'Lato', sans-serif;
@@ -59,6 +67,10 @@ button, input[type="submit"] {
     text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+button:hover, input[type="submit"]:hover{
+    cursor: pointer
 }
 
 textarea {
@@ -91,7 +103,8 @@ button {
 }
 
 .font-sm {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Navigation */
@@ -100,9 +113,10 @@ nav {
     position: sticky;
     top:0px;   
     background-color: white;
-    border-bottom: 1px solid #c0d3d2;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-bottom: var(--primary-border);
+    box-shadow: 0px 0px 4px 1px rgba(31, 31, 31, 0.2);
     font-size: 1.3rem;
+    z-index: 1;
 }
 
 nav > div {
@@ -120,15 +134,15 @@ nav > div > div {
 
 nav > div > div > span {
     font-size: 1rem;
+    display: flex; 
+    align-items: center;
 }
 
 
 nav > div > div > ul {
     display: flex;
     flex-direction: row;
-    padding-left: 0px;
-    margin: 0px;
-    list-style: none;
+    
 }
 
 nav > div > div > ul > li {
@@ -139,6 +153,10 @@ nav > div > div > ul > li:last-child {
     margin-right: 0px;
 }
 
+nav > div > div > i {
+    display: none;
+}
+
 .active {
     font-weight: 700;
 }
@@ -146,7 +164,7 @@ nav > div > div > ul > li:last-child {
 /* Home */
 
 header {
-    background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg.jpg) no-repeat center center fixed;
+    background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/home.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -156,46 +174,44 @@ header {
 }
 
 header > section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 150px;
-    
-}
-
-header > section > div:last-child {
-    margin-top: 30px;
-}
-
-header > section > div:last-child > form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 50%;
 }
 
-header > section > div:last-child > form > * {
-    margin-bottom: 10px;
+
+header > section > span{
+    margin-bottom: 20px;
 }
 
-header > section > div:last-child > form > div > input,#message {
-    width: 300px;
+header > section > div {
+    display: flex;
+    gap: 20px
 }
 
-header > section > div:last-child > form > div > textarea {
-    height: 140px;
+header > section > div > button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 25px;
 }
 
-header > section > div:last-child > form > :last-child {
-    margin-bottom: 0px;
+header > section > div > button:last-child {
+    background-color: transparent;
+    background-color: white;
+    padding: 10px 25px;
+}
+header > section > div > button:last-child > a {
+    color: grey;
 }
 
-header > section > div:last-child > form > button {
-    width: 70px
-}
+
 
 /* Services */
 
 #services {
-    min-height: 800px;
+    min-height: 650px;
     height: 70vh;
     display: flex;
     align-content: center;
@@ -211,17 +227,21 @@ header > section > div:last-child > form > button {
 }
 
 #services > div > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 30px;
     text-align: center;
 }
 
-
-#services > div > div > p {
-    line-height: 1.5rem;
+#services > div > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    flex-grow: 1;
 }
+
 
 /* Industries & Tech */
 
@@ -255,13 +275,74 @@ header > section > div:last-child > form > button {
 /* About */
 
 #about {
-    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/about.jpg) no-repeat center center fixed;
+    background:#051312;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#about > div {
+    position: absolute;
+}
+
+video {
+    height: 100%;
+    min-width: 100%;
+    background:rgba(0,0,0,0.6);
+}
+
+/* Software */
+
+#software {
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 600px;
     display: flex;
     align-items: center;
     text-align: center;
 }
+
+/* Industries */
+
+#industries {
+    padding: 75px 0px;
+}
+
+#industries > div > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+    column-gap: 60px;
+} 
+
+#industries > div > div > div  {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 4px 1px rgba(31, 31, 31, 0.2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+} 
+
+
+#industries > div > div > div > div {
+    background-color: rgba(20, 83, 80,0.1);
+    padding: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 100%;
+} 
+
+#industries > div > div > div > img {
+    width: 100%;
+    height: auto;
+}
+
 
 /* Contacts */
 
@@ -270,6 +351,7 @@ header > section > div:last-child > form > button {
     height: 500px;
     display: flex;
     align-items: center;
+    
 }
 
 #contacts > div {
@@ -287,9 +369,10 @@ header > section > div:last-child > form > button {
     position: absolute;
     top: -150px;
     background-color: white;
+    border-radius: 8px;
     width: 100%;
     padding: 50px 40px;
-    box-shadow: 0px 0px 6px 4px rgba(31, 31, 31, 0.2);
+    box-shadow: 0px 0px 4px 1px rgba(31, 31, 31, 0.2);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -364,7 +447,7 @@ header > section > div:last-child > form > button {
 /* Footer */
 
 footer {
-    border-top: 1px solid #c0d3d2;
+    border-top: var(--primary-border);
 }
 
 footer > div {
@@ -372,4 +455,208 @@ footer > div {
     justify-content: space-between;
     height: 70px;
     align-items: center;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    header > section {
+        width: 75%;
+    }
+
+    nav {
+        padding: 0 40px;
+    }
+
+    nav > div > div > span {
+        display:none;
+    }
+    #services {
+        padding: 0px 40px;
+    }
+    #about > div > * {
+        font-size: 1.2rem;
+        padding: 0px 40px;
+    }
+    
+    /* Industries */
+
+    #industries {
+        padding: 40px;
+    }
+
+    #industries > div > div {
+        row-gap: 30px;
+        column-gap: 30px;
+    } 
+
+    #software {
+        padding: 0 40px;
+    }
+
+    #contacts {
+        height: 100%;
+        padding: 40px;
+    }
+
+    #contacts > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contacts > div > div > form {
+        position: static;
+        top: 0px;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .contact-details > div > div {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        padding: 0 25px;
+    }
+
+    nav > div > div > i {
+        display:inline;
+    }
+
+    nav > div > div > span,
+    nav > div > div > ul {
+        display:none;
+    }
+
+    #nav-mobile {
+        position: fixed;
+        top: 71px;
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0px;
+        background-color: white;
+        width: 100%;
+        z-index: 1;
+        border-bottom: var(--primary-border);
+    }
+
+    header > section {
+        width: 80%;
+    }
+
+    header > section > h1 {
+        font-size: 1.5rem;
+    }
+
+    header > section > span {
+        display: none;
+    }
+
+    #services {
+        height: 100%;
+        padding: 40px;
+    }
+
+    #services > div > div {
+        flex-direction: column;
+    }
+
+    #services > div > div > div {
+        width: 100%;
+    }
+
+    #about {
+        height: 850px;
+        background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/about.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #about > div {
+        padding: 0 20px;
+        
+    }
+
+    #about > div > h2 {
+        font-size: 1.2rem;
+    }
+    
+    video {
+        display: none;
+    }
+    
+
+    #industries {
+        padding: 25px 25px;
+    }
+
+    #industries > div > div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        column-gap: 60px;
+    } 
+
+    #software {
+        height: 100%;
+        padding: 25px 25px;
+    }
+
+    #contacts {
+        height: 100%;
+        padding: 40px;
+    }
+
+    #contacts > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contacts > div > div > form {
+        position: static;
+        top: 0px;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .contact-details > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-details > div > div {
+        justify-content: center;
+    }
+
+    #contacts > div > div > form {
+        padding: 25px;
+    }
+
+    footer {
+        padding: 0 25px;
+        font-size: 1rem;
+    }
+
+
 }
