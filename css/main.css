@@ -90,9 +90,7 @@ button {
     margin-right: auto;
 }
 
-.logo {
-    font-weight: 700;
-}
+
 
 .brand-color {
     color: #145350;
@@ -105,6 +103,10 @@ button {
 .font-sm {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+i {
+    color: var(--primary-color)
 }
 
 /* Navigation */
@@ -154,6 +156,10 @@ nav > div > div > ul > li:last-child {
 }
 
 nav > div > div > i {
+    display: none;
+}
+
+#nav-mobile {
     display: none;
 }
 
@@ -436,8 +442,7 @@ video {
 }
 
 .contact-details > div > div > i{
-    font-size: 2.8rem;
-    color: #145350;
+    font-size: 2.8rem;    
 }
 
 .contact-details > div > div > div > h4 {
@@ -452,7 +457,6 @@ footer {
 
 footer > div {
     display: flex;
-    justify-content: space-between;
     height: 70px;
     align-items: center;
 }
