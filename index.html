@@ -23,34 +23,33 @@
     <!-- Navbar -->
     <nav>
         <div class="container">
-            <a class="logo" href="#"><span style="color: #145350; font-weight: 700;"><i class="icofont-safety"></i>Safe</span>Books</a>
+            <a class="logo" onclick="toTop()" ><span class="brand-color"><i class="icofont-safety"></i>Safe</span>Books</a>
             <div>
-                <span><i style="font-size: 1.4rem; margin-right: 2px;" class="icofont-phone"></i>+1 (424) 353-7888</span>
+                <span><i class="icofont-phone"></i>+1 (424) 353-7888</span>
                 <ul>
-                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link"  onclick="toTop()">Home</a></li>
                     <li><a class="nav-link" href="#services">Services</a></li>
                     <li><a class="nav-link" href="#about">About</a></li>
                     <li><a class="nav-link" href="#industries">Industries</a></li>
                     <li><a class="nav-link" href="#contacts">Contacts</a></li>
                 </ul>
-                <i class="icofont-navigation-menu" onclick="mobileMenu()"></i>
-
+                <i id="nav-menu" class="icofont-navigation-menu" onclick="mobileMenu()"></i>
             </div>
             
         </div>
     </nav>
     <ul id="nav-mobile">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a class="nav-mobile-link" onclick="toTop()">Home</a></li>
+        <li><a class="nav-mobile-link" href="#services">Services</a></li>
+        <li><a class="nav-mobile-link" href="#about">About</a></li>
+        <li><a class="nav-mobile-link" href="#industries">Industries</a></li>
+        <li><a class="nav-mobile-link" href="#contacts">Contacts</a></li>
     </ul>
     <!-- Home -->
     <header>
         <section id="home" class="container font-secondary">
             
-            <h1 style="margin-bottom: 30px;">Proficient & Cost-Effective <span style="display: block;"></span> Accounting & Bookkeeping Services</span></h1>
+            <h1>Proficient & Cost-Effective <span></span> Accounting & Bookkeeping Services</h1>
             <span>SafeBooks offers complete range of accounting and bookkeeping services to a wide range of industries. Our main goal is to provide customized accounting services that meets your business needs and serves as a key component to sustainable growth focused operation.</span> 
             <div>
                 <button>Services</button>
@@ -62,49 +61,37 @@
     <!-- Services -->
     <section id="services" >
         <div class="container" >
-            <h2 style="text-align: center; color: #145350;">Services</h2>
+            <h2>Services</h2>
             <div>
                 <div>
-                    <i style="font-size:3.5rem;" class="icofont-checked"></i>
-                    <h3 style="margin-top: 5px" class="brand-color">Payroll Processing</h3>
+                    <i class="icofont-checked"></i>
+                    <h3>Payroll Processing</h3>
                     <p class="font-sm">ADP, Gusto, Paylocity, Paychex, Timekeeping apps, and payroll tax processing</p>
-                    <!-- <p class="font-sm">Setting up the best fitting payroll system for your business needs, direct deposits, employer taxes and more. </p> -->
                 </div>
                 <div>
-                    <i style="font-size:3.5rem;" class="icofont-sign-out"></i>
-                    <h3 style="margin-top: 5px" class="brand-color">Accounts Payable</h3>
+                    <i class="icofont-sign-out"></i>
+                    <h3>Accounts Payable</h3>
                     <p class="font-sm">Entering invoices, bill payment, 1099 filing and maintaining invoices and W9 forms</p>
-                    <!-- <p class="font-sm">Tracking and scheduling bill payments and file 1099 on your behalf</p> -->
                 </div>
                 <div>
-                    <i style="font-size:3.5rem;" class="icofont-sign-in"></i>
-                    <h3 style="margin-top: 5px" class="brand-color">Accounts Receivable</h3>
+                    <i class="icofont-sign-in"></i>
+                    <h3>Accounts Receivable</h3>
                     <p class="font-sm">Billing, recording of invoices, sending them to your clients, deposits and collection</p>
-                    <!-- <p class="font-sm">Safebooks makes sure that you receive all the payments for your invoices in a timely manner. We perform all accounts receivable and billing for your business whether it’s generating your invoices, sending them out to your clients or depositing and collecting all the payments</p> -->
                 </div>
                 <div>
-                    <div>
-                        <i style="font-size:3.5rem;" class="icofont-listing-number"></i>
-                        <h3 style="margin-top: 5px" class="brand-color">Bookkeeping</h3>
-                        <p class="font-sm">Maintaining financial records, performing bank reconciliations and managing the chart of accounts</p>
-                        <!-- <p class="font-sm">Accurate financial recording, monthly bank reconciliations and categorized transactions</p> -->
-                    </div>
+                    <i class="icofont-listing-number"></i>
+                    <h3>Bookkeeping</h3>
+                    <p class="font-sm">Maintaining financial records, performing bank reconciliations and managing the chart of accounts</p>
                 </div>
                 <div>
-                    <div>
-                        <i style="font-size:3.5rem;" class="icofont-data"></i>
-                        <h3 style="margin-top: 5px" class="brand-color">Financial Reporting</h3>
-                        <p class="font-sm">Weekly financial report overview. Balance Sheet, Profit & Loss, and Cash Flow Statements</p>
-                        <!-- <p class="font-sm">Accurate financial recording, monthly bank reconciliations and categorized transactions</p> -->
-                    </div>
+                    <i class="icofont-data"></i>
+                    <h3>Financial Reporting</h3>
+                    <p class="font-sm">Weekly financial report overview. Balance Sheet, Profit & Loss, and Cash Flow Statements</p>
                 </div>
                 <div>
-                    <div>
-                        <i style="font-size:3.5rem;" class="icofont-chart-line"></i>
-                        <h3 style="margin-top: 5px" class="brand-color">Tax & Financial Planning.</h3>
-                        <p class="font-sm">Filing forms for LLC, Incorporation, Corporation, C-corp, S-Corp tax returns with the help of a CPA</p>
-                        <!-- <p class="font-sm">Experienced bookkeepers with a strong accounting background who make sure that all your financial information is recorded accurately, all your bank reconciliations are completed on a monthly basis and every single transaction is categorized accordingly</p> -->
-                    </div>
+                    <i class="icofont-chart-line"></i>
+                    <h3>Tax & Financial Planning.</h3>
+                    <p class="font-sm">Filing forms for LLC, Incorporation, Corporation, C-corp, S-Corp tax returns with the help of a CPA</p>
                 </div>
             </div>
         </div>
@@ -128,33 +115,33 @@
     <!-- Industries & Technology -->
     <section id="industries" >
         <div class="container" >
-            <h2 style="text-align: center; color: #145350; margin-bottom: 40px;">Industries</h2>
+            <h2>Industries</h2>
             <div>
                 <div>
                     <img src="img/logistics.jpg" alt="Logistics Industry">
                     <div>
-                        <h3 style="color: #145350;">Logistics</h3>
+                        <h3>Logistics</h3>
                         <p class="font-sm">Our team has extended experience in the logistics and ground freight transportation industry. Our specialists will be able to assist and resolve various tasks - invoicing properly documented bills of lading, resolving additional charges on loads such as lumper, fumigation, road service fees or IFTA calculation.</p>
                     </div>
                 </div>
                 <div>
                     <img src="img/construction.jpg" alt="Construction Industry">
                     <div>
-                        <h3 style="color: #145350;">Construction</h3>
+                        <h3>Construction</h3>
                         <p class="font-sm">There are many features that make construction accounting different from other businesses and it a customized procedures is a crucial aspect; retention, job costing, change orders, progress billing, customer deposits apart from regular accounts payable, accounts receivable, payroll and other accounting processes.</p>
                     </div>
                 </div>
                 <div>
                     <img src="img/marketing.jpg" alt="Marketing Industry">
                     <div>
-                        <h3 style="color: #145350;">Marketing</h3>
+                        <h3>Marketing</h3>
                         <p class="font-sm">Accounting in marketing provides a clear and holistic view of a company's financial state by analyzing financial data which helps to increase marketing efficiency and make better decisions. This includes analyzing cash flow, revenue, budgeting and forecasting.</p>
                     </div>
                 </div>
                 <div>
                     <img src="img/tech.jpg" alt="Tech Industry">
                     <div>
-                        <h3 style="color: #145350;">Tech</h3>
+                        <h3>Tech</h3>
                         <p class="font-sm">One major feature that makes technology companies unique is their intangible assets. Tech industry is fast evolving and realizing this, we support these companies with accounting processes such as accounts payable, receivable, collection and how to be compliant with federal, state and local tax planning.</p>
                     </div>
                 </div>
@@ -237,9 +224,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <span class="logo"><span style="color: #145350; font-weight: 700;"><i class="icofont-safety"></i>Safe</span>Books</span>
+            <span class="logo"><span class="brand-color"><i class="icofont-safety"></i>Safe</span>Books</span>
         </div>
     </footer>
-
+    <script src="main.js"></script>
 </body>
 </html>
